@@ -13,12 +13,22 @@ namespace SIENA
 {
     public partial class Login : Form
     {
+
         public Login()
         {
             InitializeComponent();
+
+            this.txtPassword.AutoSize = false;
+            this.txtPassword.Size = new Size(this.txtPassword.Size.Width, 50);
         }
 
-        private void btnLogin_Click(object sender, EventArgs e)
+        private void labelClose_Click(object sender, EventArgs e)
+        {
+            //this.Close();
+            Application.Exit();
+        }
+
+        private void buttonLogin_Click(object sender, EventArgs e)
         {
             SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\SienaDB.mdf;Integrated Security=True"); //creates connection to database   
             SqlDataAdapter sda = new SqlDataAdapter("SELECT COUNT(*) FROM LoginCredentials WHERE username='" + txtUname.Text + "' AND password='" + txtPassword.Text + "'", con); //checks if values entered are in database
@@ -33,11 +43,24 @@ namespace SIENA
             {
                 MessageBox.Show("Invalid username or password");
             }
+
         }
 
-        private void lnkForgotPwd_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void labelGoToSignUp_Click(object sender, EventArgs e)
         {
-            new AccountRecovery().Show();
+            this.Hide();
+            Panels.RegisterPanel registerform = new Panels.RegisterPanel();
+            registerform.Show();
+        }
+
+        private void labelGoToSignUp_MouseEnter(object sender, EventArgs e)
+        {
+            labelGoToSignUp.ForeColor = Color.Yellow;
+        }
+
+        private void labelGoToSignUp_MouseLeave(object sender, EventArgs e)
+        {
+            labelGoToSignUp.ForeColor = Color.White;
         }
     }
 }

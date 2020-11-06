@@ -11,3 +11,18 @@ C:\Users\Jr\source\repos\SIENA\SIENA\obj\Debug\SIENA.exe
 C:\Users\Jr\source\repos\SIENA\SIENA\obj\Debug\SIENA.pdb
 C:\Users\Jr\source\repos\SIENA\SIENA\obj\Debug\SIENA.Login.resources
 C:\Users\Jr\source\repos\SIENA\SIENA\obj\Debug\SIENA.AccountRecovery.resources
+D:\ProgramData\Projects Visual Studio\AdBaseProject\SIENA\bin\Debug\SienaDB.mdf
+D:\ProgramData\Projects Visual Studio\AdBaseProject\SIENA\bin\Debug\SienaDB_log.ldf
+D:\ProgramData\Projects Visual Studio\AdBaseProject\SIENA\bin\Debug\SIENA.exe.config
+D:\ProgramData\Projects Visual Studio\AdBaseProject\SIENA\bin\Debug\SIENA.exe
+D:\ProgramData\Projects Visual Studio\AdBaseProject\SIENA\bin\Debug\SIENA.pdb
+D:\ProgramData\Projects Visual Studio\AdBaseProject\SIENA\obj\Debug\SIENA.csprojAssemblyReference.cache
+D:\ProgramData\Projects Visual Studio\AdBaseProject\SIENA\obj\Debug\SIENA.AccountRecovery.resources
+D:\ProgramData\Projects Visual Studio\AdBaseProject\SIENA\obj\Debug\SIENA.Login.resources
+D:\ProgramData\Projects Visual Studio\AdBaseProject\SIENA\obj\Debug\SIENA.Properties.Resources.resources
+D:\ProgramData\Projects Visual Studio\AdBaseProject\SIENA\obj\Debug\SIENA.csproj.GenerateResource.cache
+D:\ProgramData\Projects Visual Studio\AdBaseProject\SIENA\obj\Debug\SIENA.csproj.CoreCompileInputs.cache
+D:\ProgramData\Projects Visual Studio\AdBaseProject\SIENA\obj\Debug\SIENA.exe
+D:\ProgramData\Projects Visual Studio\AdBaseProject\SIENA\obj\Debug\SIENA.pdb
+D:\ProgramData\Projects Visual Studio\AdBaseProject\SIENA\obj\Debug\SIENA.AdminPanel.resources
+D:\ProgramData\Projects Visual Studio\AdBaseProject\SIENA\obj\Debug\SIENA.Panels.RegisterPanel.resources
