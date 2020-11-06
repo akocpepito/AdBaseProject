@@ -1,0 +1,13 @@
+C:\Users\Jr\source\repos\SIENA\SIENA\bin\Debug\SienaDB.mdf
+C:\Users\Jr\source\repos\SIENA\SIENA\bin\Debug\SienaDB_log.ldf
+C:\Users\Jr\source\repos\SIENA\SIENA\bin\Debug\SIENA.exe.config
+C:\Users\Jr\source\repos\SIENA\SIENA\bin\Debug\SIENA.exe
+C:\Users\Jr\source\repos\SIENA\SIENA\bin\Debug\SIENA.pdb
+C:\Users\Jr\source\repos\SIENA\SIENA\obj\Debug\SIENA.csprojAssemblyReference.cache
+C:\Users\Jr\source\repos\SIENA\SIENA\obj\Debug\SIENA.Properties.Resources.resources
+C:\Users\Jr\source\repos\SIENA\SIENA\obj\Debug\SIENA.csproj.GenerateResource.cache
+C:\Users\Jr\source\repos\SIENA\SIENA\obj\Debug\SIENA.csproj.CoreCompileInputs.cache
+C:\Users\Jr\source\repos\SIENA\SIENA\obj\Debug\SIENA.exe
+C:\Users\Jr\source\repos\SIENA\SIENA\obj\Debug\SIENA.pdb
+C:\Users\Jr\source\repos\SIENA\SIENA\obj\Debug\SIENA.Login.resources
+C:\Users\Jr\source\repos\SIENA\SIENA\obj\Debug\SIENA.AccountRecovery.resources
