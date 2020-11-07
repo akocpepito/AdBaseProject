@@ -59,18 +59,16 @@ namespace SIENA
                     if (checkUserType.Rows[0][0].ToString().Equals("admin"))
                     {
                         MessageBox.Show("Welcome " + dt.Rows[0][3].ToString() + "\n You are an admin");
+                        this.Visible = false;
+                        new AdminPanel().Show();
                     }
 
                     else if (checkUserType.Rows[0][0].ToString().Equals("user"))
                     {
                         MessageBox.Show("Welcome " + dt.Rows[0][3].ToString());
                     }
-
-
                 }
-
             }
-
         }
 
         private void labelGoToSignUp_Click(object sender, EventArgs e)

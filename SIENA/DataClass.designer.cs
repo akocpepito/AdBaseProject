@@ -189,7 +189,7 @@ namespace SIENA
 		
 		private string _Last_Name;
 		
-		private string _BirthDate;
+		private System.Nullable<System.DateTime> _BirthDate;
 		
 		private string _Gender;
 		
@@ -198,6 +198,8 @@ namespace SIENA
 		private string _Email_address;
 		
 		private string _Phone_number;
+		
+		private string _Enabled;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -215,7 +217,7 @@ namespace SIENA
     partial void OnMiddle_NameChanged();
     partial void OnLast_NameChanging(string value);
     partial void OnLast_NameChanged();
-    partial void OnBirthDateChanging(string value);
+    partial void OnBirthDateChanging(System.Nullable<System.DateTime> value);
     partial void OnBirthDateChanged();
     partial void OnGenderChanging(string value);
     partial void OnGenderChanged();
@@ -225,6 +227,8 @@ namespace SIENA
     partial void OnEmail_addressChanged();
     partial void OnPhone_numberChanging(string value);
     partial void OnPhone_numberChanged();
+    partial void OnEnabledChanging(string value);
+    partial void OnEnabledChanged();
     #endregion
 		
 		public User()
@@ -292,7 +296,7 @@ namespace SIENA
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[First Name]", Storage="_First_Name", DbType="NChar(10) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[First Name]", Storage="_First_Name", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
 		public string First_Name
 		{
 			get
@@ -312,7 +316,7 @@ namespace SIENA
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[Middle Name]", Storage="_Middle_Name", DbType="NChar(10) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[Middle Name]", Storage="_Middle_Name", DbType="NVarChar(50)")]
 		public string Middle_Name
 		{
 			get
@@ -332,7 +336,7 @@ namespace SIENA
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[Last Name]", Storage="_Last_Name", DbType="NChar(10) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[Last Name]", Storage="_Last_Name", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
 		public string Last_Name
 		{
 			get
@@ -352,8 +356,8 @@ namespace SIENA
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_BirthDate", DbType="NChar(10) NOT NULL", CanBeNull=false)]
-		public string BirthDate
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_BirthDate", DbType="DateTime")]
+		public System.Nullable<System.DateTime> BirthDate
 		{
 			get
 			{
@@ -372,7 +376,7 @@ namespace SIENA
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Gender", DbType="NChar(10) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Gender", DbType="NVarChar(50)")]
 		public string Gender
 		{
 			get
@@ -392,7 +396,7 @@ namespace SIENA
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Address", DbType="NChar(10) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Address", DbType="NVarChar(50)")]
 		public string Address
 		{
 			get
@@ -412,7 +416,7 @@ namespace SIENA
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[Email address]", Storage="_Email_address", DbType="NChar(10) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[Email address]", Storage="_Email_address", DbType="NVarChar(50)")]
 		public string Email_address
 		{
 			get
@@ -432,7 +436,7 @@ namespace SIENA
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[Phone number]", Storage="_Phone_number", DbType="NChar(10) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[Phone number]", Storage="_Phone_number", DbType="NVarChar(50)")]
 		public string Phone_number
 		{
 			get
@@ -448,6 +452,26 @@ namespace SIENA
 					this._Phone_number = value;
 					this.SendPropertyChanged("Phone_number");
 					this.OnPhone_numberChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Enabled", DbType="Text NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
+		public string Enabled
+		{
+			get
+			{
+				return this._Enabled;
+			}
+			set
+			{
+				if ((this._Enabled != value))
+				{
+					this.OnEnabledChanging(value);
+					this.SendPropertyChanging();
+					this._Enabled = value;
+					this.SendPropertyChanged("Enabled");
+					this.OnEnabledChanged();
 				}
 			}
 		}

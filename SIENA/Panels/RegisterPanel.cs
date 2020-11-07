@@ -171,9 +171,31 @@ namespace SIENA.Panels
 
         private void buttonCreateAccount_Click(object sender, EventArgs e)
         {
-            
-                checkTextBoxesValues();
+            if (checkTextBoxesValues())
+            {
+                User newUser = new User();
+                newUser.First_Name = textBoxFirstname.Text;
+                newUser.Last_Name = textBoxLastname.Text;
+                newUser.Email_address = textBoxEmail.Text;
+                newUser.Username = textBoxUsername.Text;
+                newUser.Password = textBoxPassword.Text;
+                newUser.User_Type = "user";
+                newUser.Enabled = "no";
 
+                DataClassDataContext newUserDbCtx = new DataClassDataContext();
+                newUserDbCtx.Users.InsertOnSubmit(newUser);
+
+                try
+                {
+                    newUserDbCtx.SubmitChanges();
+                    MessageBox.Show("Your account has been created.");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.ToString());
+                }
+
+            }
 
                 
 
@@ -268,7 +290,7 @@ namespace SIENA.Panels
         }
 
         // check if the textboxes contains the default values
-        private void checkTextBoxesValues()
+        private Boolean checkTextBoxesValues()
         {
             String fname = textBoxFirstname.Text;
             String lname = textBoxLastname.Text;
@@ -281,6 +303,7 @@ namespace SIENA.Panels
                 || pass.Equals("password"))
             {
                 MessageBox.Show("Please fill in all the details.", "Entry error", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+                return false;
             }
             else
             {
@@ -289,10 +312,12 @@ namespace SIENA.Panels
                     if (!textBoxPassword.Text.Equals(textBoxPasswordConfirm.Text))
                     {
                         MessageBox.Show("Username is already existing.\nPassword and Confirm password do not match.", "Entry error", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+                        return false;
                     }
                     else
                     {
                         MessageBox.Show("Username is already existing.", "Entry error", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+                        return false;
                     }
                 }
                 else
@@ -300,10 +325,11 @@ namespace SIENA.Panels
                     if (!textBoxPassword.Text.Equals(textBoxPasswordConfirm.Text))
                     {
                         MessageBox.Show("Password and Confirm password do not match.", "Entry error", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+                        return false;
                     }
                     else
                     {
-                        // code continues
+                        return true;
                     }
                 }
             }
