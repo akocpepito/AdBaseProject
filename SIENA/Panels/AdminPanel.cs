@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SIENA.Panels;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,13 @@ namespace SIENA
         public AdminPanel()
         {
             InitializeComponent();
+        }
+
+        private void buttonCreateAccount_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            RegisterPanel registerPanel = new RegisterPanel();
+            registerPanel.Show();
         }
     }
 }
