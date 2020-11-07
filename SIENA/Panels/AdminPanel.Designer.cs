@@ -36,6 +36,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.buttonCreateAccount = new System.Windows.Forms.Button();
+            this.textBoxFirstname = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.sienaDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sienaDBDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -60,7 +61,7 @@
             this.dataGridView1.DataSource = this.sienaDBDataSetBindingSource1;
             this.dataGridView1.Location = new System.Drawing.Point(12, 149);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(764, 289);
+            this.dataGridView1.Size = new System.Drawing.Size(776, 289);
             this.dataGridView1.TabIndex = 0;
             // 
             // sienaDBDataSetBindingSource1
@@ -104,12 +105,24 @@
             this.buttonCreateAccount.UseVisualStyleBackColor = false;
             this.buttonCreateAccount.Click += new System.EventHandler(this.buttonCreateAccount_Click);
             // 
+            // textBoxFirstname
+            // 
+            this.textBoxFirstname.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxFirstname.ForeColor = System.Drawing.Color.Gray;
+            this.textBoxFirstname.Location = new System.Drawing.Point(457, 84);
+            this.textBoxFirstname.Multiline = true;
+            this.textBoxFirstname.Name = "textBoxFirstname";
+            this.textBoxFirstname.Size = new System.Drawing.Size(331, 34);
+            this.textBoxFirstname.TabIndex = 201;
+            this.textBoxFirstname.Text = "Search";
+            // 
             // AdminPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(24)))), ((int)(((byte)(34)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.textBoxFirstname);
             this.Controls.Add(this.buttonCreateAccount);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.dataGridView1);
@@ -122,6 +135,7 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -133,5 +147,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button buttonCreateAccount;
+        private System.Windows.Forms.TextBox textBoxFirstname;
     }
 }
