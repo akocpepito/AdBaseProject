@@ -31,13 +31,11 @@ namespace SIENA
         {
             string newPassword = RandomPassword();
 
-            LoginCredential user = new LoginCredential();
-
             DataClassDataContext dbCtx = new DataClassDataContext();
 
             var getData = (
 
-                from x in dbCtx.LoginCredentials
+                from x in dbCtx.Users
                 where x.Username.Equals(txtForgotUname.Text)
                 select x
             ).ToList().Last();

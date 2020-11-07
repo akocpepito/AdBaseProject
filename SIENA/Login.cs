@@ -31,17 +31,44 @@ namespace SIENA
         private void buttonLogin_Click(object sender, EventArgs e)
         {
             SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\SienaDB.mdf;Integrated Security=True"); //creates connection to database   
-            SqlDataAdapter sda = new SqlDataAdapter("SELECT COUNT(*) FROM LoginCredentials WHERE username='" + txtUname.Text + "' AND password='" + txtPassword.Text + "'", con); //checks if values entered are in database
+            SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM Users WHERE username='" + txtUname.Text + "' AND password='" + txtPassword.Text + "'", con); //checks if values entered are in database
             
             DataTable dt = new DataTable(); //creates a virtual table for the check  
+            DataView dv = new DataView(dt);
+
             sda.Fill(dt);
-            if (dt.Rows[0][0].ToString() == "1")
+
+            if (dt.Rows.Count == 0)
             {
-                MessageBox.Show("Welcome!");
+                MessageBox.Show("Invalid username or password");
             }
             else
             {
-                MessageBox.Show("Invalid username or password");
+                
+                DataTable enabledCheck = dv.ToTable(true, "Enabled");
+
+                if (!enabledCheck.Rows[0][0].ToString().Equals("yes"))
+
+                {
+                    MessageBox.Show("Your account has not yet been activated.\nPlease contact your administrator.");
+                }
+                else
+                {
+                    DataTable checkUserType = dv.ToTable(true, "User Type");
+
+                    if (checkUserType.Rows[0][0].ToString().Equals("admin"))
+                    {
+                        MessageBox.Show("Welcome " + dt.Rows[0][3].ToString() + "\n You are an admin");
+                    }
+
+                    else if (checkUserType.Rows[0][0].ToString().Equals("user"))
+                    {
+                        MessageBox.Show("Welcome " + dt.Rows[0][3].ToString());
+                    }
+
+
+                }
+
             }
 
         }

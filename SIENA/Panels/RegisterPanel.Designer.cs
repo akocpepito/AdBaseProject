@@ -119,10 +119,10 @@
             // 
             this.textBoxLastname.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxLastname.ForeColor = System.Drawing.Color.Gray;
-            this.textBoxLastname.Location = new System.Drawing.Point(329, 145);
+            this.textBoxLastname.Location = new System.Drawing.Point(330, 145);
             this.textBoxLastname.Multiline = true;
             this.textBoxLastname.Name = "textBoxLastname";
-            this.textBoxLastname.Size = new System.Drawing.Size(260, 40);
+            this.textBoxLastname.Size = new System.Drawing.Size(259, 40);
             this.textBoxLastname.TabIndex = 6;
             this.textBoxLastname.Text = "last name";
             this.textBoxLastname.Enter += new System.EventHandler(this.textBoxLastname_Enter);
@@ -163,7 +163,7 @@
             this.textBoxFirstname.Location = new System.Drawing.Point(52, 145);
             this.textBoxFirstname.Multiline = true;
             this.textBoxFirstname.Name = "textBoxFirstname";
-            this.textBoxFirstname.Size = new System.Drawing.Size(260, 40);
+            this.textBoxFirstname.Size = new System.Drawing.Size(272, 40);
             this.textBoxFirstname.TabIndex = 200;
             this.textBoxFirstname.Text = "first name";
             this.textBoxFirstname.Enter += new System.EventHandler(this.textBoxFirstname_Enter);
@@ -213,7 +213,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "RegisterPanel";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "RegisterForm";
+            this.Text = "Register New Account";
             this.Load += new System.EventHandler(this.RegisterForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

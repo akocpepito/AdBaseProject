@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace SIENA.Panels
 {
@@ -166,8 +167,28 @@ namespace SIENA.Panels
             labelClose.ForeColor = Color.White;
         }
 
+ 
+
         private void buttonCreateAccount_Click(object sender, EventArgs e)
         {
+            
+                checkTextBoxesValues();
+
+
+                
+
+
+
+
+/*
+
+                if (textBoxFirstname.Text.Equals("first name") || textBoxLastname.Text.Equals("last name") || textBoxEmail.Text.Equals("email address"))
+                MessageBox.Show("Please enter your details.");
+
+            newUser.Username = textBoxUsername.Text;
+            newUser.Password = textBoxPassword.Text;
+  */          
+            
             // add a new user
             /*
               DB db = new DB();
@@ -229,41 +250,25 @@ namespace SIENA.Panels
 
         }
 
-
-        // check if the username already exists
-        public Boolean checkUsername()
+        // checks if the username already exists
+        private Boolean checkUnameExisting()
         {
-            /*
-             *  DB db = new DB();
+            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\SienaDB.mdf;Integrated Security=True"); //creates connection to database   
+            SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM Users WHERE username='" + textBoxUsername.Text + "'", con); //checks if values entered are in database
 
-            String username = textBoxUsername.Text;
+            DataTable dt = new DataTable(); //creates a virtual table for the check  
 
-            DataTable table = new DataTable();
+            sda.Fill(dt);
+            con.Close();
 
-            MySqlDataAdapter adapter = new MySqlDataAdapter();
-
-            MySqlCommand command = new MySqlCommand("SELECT * FROM `users` WHERE `username` = @usn", db.getConnection());
-
-            command.Parameters.Add("@usn", MySqlDbType.VarChar).Value = username;
-             adapter.SelectCommand = command;
-
-            adapter.Fill(table);
-
-            // check if this username already exists in the database
-            if (table.Rows.Count > 0)
-            {
+            if (dt.Rows.Count > 0)
                 return true;
-            }
             else
-            {
                 return false;
-            }
-             */
-            return false;
         }
 
         // check if the textboxes contains the default values
-        public Boolean checkTextBoxesValues()
+        private void checkTextBoxesValues()
         {
             String fname = textBoxFirstname.Text;
             String lname = textBoxLastname.Text;
@@ -275,13 +280,33 @@ namespace SIENA.Panels
                 email.Equals("email address") || uname.Equals("username")
                 || pass.Equals("password"))
             {
-                return true;
+                MessageBox.Show("Please fill in all the details.", "Entry error", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
             }
             else
             {
-                return false;
+                if (checkUnameExisting())
+                {
+                    if (!textBoxPassword.Text.Equals(textBoxPasswordConfirm.Text))
+                    {
+                        MessageBox.Show("Username is already existing.\nPassword and Confirm password do not match.", "Entry error", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Username is already existing.", "Entry error", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+                    }
+                }
+                else
+                {
+                    if (!textBoxPassword.Text.Equals(textBoxPasswordConfirm.Text))
+                    {
+                        MessageBox.Show("Password and Confirm password do not match.", "Entry error", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+                    }
+                    else
+                    {
+                        // code continues
+                    }
+                }
             }
-
         }
 
         private void labelGoToLogin_MouseEnter(object sender, EventArgs e)

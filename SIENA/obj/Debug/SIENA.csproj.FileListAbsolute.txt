@@ -26,3 +26,5 @@ D:\ProgramData\Projects Visual Studio\AdBaseProject\SIENA\obj\Debug\SIENA.exe
 D:\ProgramData\Projects Visual Studio\AdBaseProject\SIENA\obj\Debug\SIENA.pdb
 D:\ProgramData\Projects Visual Studio\AdBaseProject\SIENA\obj\Debug\SIENA.AdminPanel.resources
 D:\ProgramData\Projects Visual Studio\AdBaseProject\SIENA\obj\Debug\SIENA.Panels.RegisterPanel.resources
+C:\Users\Jr\source\repos\SIENA\SIENA\obj\Debug\SIENA.AdminPanel.resources
+C:\Users\Jr\source\repos\SIENA\SIENA\obj\Debug\SIENA.Panels.RegisterPanel.resources
