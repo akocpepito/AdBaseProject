@@ -28,5 +28,10 @@ namespace SIENA
 
             userDataTable.DataSource = dataTable;
         }
+
+        private void userDataTable_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

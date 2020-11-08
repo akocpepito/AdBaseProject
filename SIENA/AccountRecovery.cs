@@ -39,6 +39,7 @@ namespace SIENA
             try
             {
                 dbCtx.SubmitChanges();
+                new EmailClass().SendPasswordResetEmail(getData);
                 MessageBox.Show("Updated! Your new password is "+newPassword);
             }
             catch (Exception exe)
@@ -47,5 +48,9 @@ namespace SIENA
             }
         }
 
+        private void AccountRecovery_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

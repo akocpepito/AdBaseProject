@@ -198,8 +198,8 @@ namespace SIENA.Panels
                 newUser.Email_address = textBoxEmail.Text;
                 newUser.Username = textBoxUsername.Text;
                 newUser.Password = textBoxPassword.Text;
-                newUser.User_Type = "user";
-                newUser.Enabled = "no";
+                newUser.User_Type = "Student";
+                newUser.Enabled = "No";
 
                 DataClassDataContext newUserDbCtx = new DataClassDataContext();
                 newUserDbCtx.Users.InsertOnSubmit(newUser);
@@ -207,7 +207,7 @@ namespace SIENA.Panels
                 try
                 {
                     newUserDbCtx.SubmitChanges();
-                    sendEmailConfirmation(newUser);
+                    new EmailClass().SendConfirmationEmail(newUser);
                     MessageBox.Show("Your account has been created.");
                 }
                 catch (Exception ex)

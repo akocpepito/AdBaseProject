@@ -200,31 +200,31 @@
             // 
             // viewUsers
             // 
-            this.viewUsers.Location = new System.Drawing.Point(155, -3);
+            this.viewUsers.Location = new System.Drawing.Point(166, 0);
             this.viewUsers.Name = "viewUsers";
-            this.viewUsers.Size = new System.Drawing.Size(777, 614);
+            this.viewUsers.Size = new System.Drawing.Size(581, 614);
             this.viewUsers.TabIndex = 205;
             // 
             // homePage1
             // 
             this.homePage1.BackColor = System.Drawing.Color.Gold;
-            this.homePage1.Location = new System.Drawing.Point(585, 0);
+            this.homePage1.Location = new System.Drawing.Point(166, 0);
             this.homePage1.Name = "homePage1";
-            this.homePage1.Size = new System.Drawing.Size(347, 614);
+            this.homePage1.Size = new System.Drawing.Size(581, 614);
             this.homePage1.TabIndex = 204;
             // 
             // create_User1
             // 
-            this.create_User1.Location = new System.Drawing.Point(209, 0);
+            this.create_User1.Location = new System.Drawing.Point(166, 0);
             this.create_User1.Name = "create_User1";
-            this.create_User1.Size = new System.Drawing.Size(347, 614);
+            this.create_User1.Size = new System.Drawing.Size(581, 614);
             this.create_User1.TabIndex = 202;
             // 
             // modify_User1
             // 
-            this.modify_User1.Location = new System.Drawing.Point(209, 0);
+            this.modify_User1.Location = new System.Drawing.Point(166, 0);
             this.modify_User1.Name = "modify_User1";
-            this.modify_User1.Size = new System.Drawing.Size(347, 621);
+            this.modify_User1.Size = new System.Drawing.Size(581, 621);
             this.modify_User1.TabIndex = 203;
             // 
             // AdminPanel
@@ -232,7 +232,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(931, 610);
+            this.ClientSize = new System.Drawing.Size(746, 610);
             this.Controls.Add(this.viewUsers);
             this.Controls.Add(this.homePage1);
             this.Controls.Add(this.create_User1);

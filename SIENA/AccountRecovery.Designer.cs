@@ -69,6 +69,7 @@
             this.Controls.Add(this.txtForgotUname);
             this.Name = "AccountRecovery";
             this.Text = "Forgot Password";
+            this.Load += new System.EventHandler(this.AccountRecovery_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

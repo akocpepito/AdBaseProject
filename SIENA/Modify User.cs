@@ -137,10 +137,12 @@ namespace SIENA
             getData.BirthDate = dtpBirthDate.Value;
             getData.Year_Joined = dtpJoined.Value;
             getData.User_Type = groupUser.Controls.OfType<RadioButton>().FirstOrDefault(r => r.Checked).Text;
-            getData.Gender = groupGender.Controls.OfType<RadioButton>().FirstOrDefault(r => r.Checked).Text;
             getData.Course = cbCourse.Text;
             getData.Department = cbDept.Text;
-            
+
+            if(rbFemale.Checked || rbMale.Checked)
+            getData.Gender = groupGender.Controls.OfType<RadioButton>().FirstOrDefault(r => r.Checked).Text;
+
             if (checkEnabled.Checked)
             {
                 getData.Enabled = "Yes";

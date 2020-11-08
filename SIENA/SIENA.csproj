@@ -70,6 +70,7 @@
     <Compile Include="Create User.Designer.cs">
       <DependentUpon>Create User.cs</DependentUpon>
     </Compile>
+    <Compile Include="EmailClass.cs" />
     <Compile Include="HomePage.cs">
       <SubType>UserControl</SubType>
     </Compile>
