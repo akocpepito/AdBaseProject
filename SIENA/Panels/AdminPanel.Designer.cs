@@ -34,6 +34,7 @@
             this.sienaDBDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sienaDBDataSetBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnLogout = new System.Windows.Forms.Button();
             this.btnViewCourses = new System.Windows.Forms.Button();
             this.btnManageCourse = new System.Windows.Forms.Button();
             this.btnCreateCourse = new System.Windows.Forms.Button();
@@ -73,6 +74,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.btnLogout);
             this.panel2.Controls.Add(this.btnViewCourses);
             this.panel2.Controls.Add(this.btnManageCourse);
             this.panel2.Controls.Add(this.btnCreateCourse);
@@ -87,6 +89,16 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(161, 614);
             this.panel2.TabIndex = 3;
+            // 
+            // btnLogout
+            // 
+            this.btnLogout.Location = new System.Drawing.Point(13, 487);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(137, 35);
+            this.btnLogout.TabIndex = 210;
+            this.btnLogout.Text = "Logout";
+            this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // btnViewCourses
             // 
@@ -258,5 +270,6 @@
         private Modify_User modify_User1;
         private HomePage homePage1;
         private ViewUsers viewUsers;
+        private System.Windows.Forms.Button btnLogout;
     }
 }

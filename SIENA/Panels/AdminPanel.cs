@@ -62,5 +62,11 @@ namespace SIENA
             create_User1.Visible = false;
             modify_User1.Visible = false;
         }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            new Login().Show();
+        }
     }
 }
