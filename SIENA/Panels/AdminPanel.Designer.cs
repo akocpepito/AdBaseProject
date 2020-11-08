@@ -32,7 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminPanel));
             this.sienaDBDataSet = new SIENA.SienaDBDataSet();
             this.sienaDBDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.sienaDBDataSetBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnViewCourses = new System.Windows.Forms.Button();
@@ -44,16 +43,13 @@
             this.btnManageUser = new System.Windows.Forms.Button();
             this.btnCreateUser = new System.Windows.Forms.Button();
             this.greetingLabel = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.buttonCreateAccount = new System.Windows.Forms.Button();
-            this.textBoxFirstname = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.modify_User1 = new SIENA.Modify_User();
-            this.create_User1 = new SIENA.Create_User();
+            this.viewUsers = new SIENA.ViewUsers();
             this.homePage1 = new SIENA.HomePage();
+            this.create_User1 = new SIENA.Create_User();
+            this.modify_User1 = new SIENA.Modify_User();
             ((System.ComponentModel.ISupportInitialize)(this.sienaDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sienaDBDataSetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sienaDBDataSetBindingSource1)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -68,16 +64,6 @@
             // 
             this.sienaDBDataSetBindingSource.DataSource = this.sienaDBDataSet;
             this.sienaDBDataSetBindingSource.Position = 0;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.DataSource = this.sienaDBDataSetBindingSource1;
-            this.dataGridView1.Location = new System.Drawing.Point(277, 170);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(381, 289);
-            this.dataGridView1.TabIndex = 0;
             // 
             // sienaDBDataSetBindingSource1
             // 
@@ -189,44 +175,6 @@
             this.greetingLabel.TabIndex = 1;
             this.greetingLabel.Text = "Welcome ";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft YaHei", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.MediumBlue;
-            this.label2.Location = new System.Drawing.Point(220, 390);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(242, 42);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "Administrator";
-            // 
-            // buttonCreateAccount
-            // 
-            this.buttonCreateAccount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(66)))), ((int)(((byte)(85)))));
-            this.buttonCreateAccount.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonCreateAccount.FlatAppearance.BorderSize = 0;
-            this.buttonCreateAccount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCreateAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCreateAccount.ForeColor = System.Drawing.Color.White;
-            this.buttonCreateAccount.Location = new System.Drawing.Point(408, 253);
-            this.buttonCreateAccount.Name = "buttonCreateAccount";
-            this.buttonCreateAccount.Size = new System.Drawing.Size(179, 47);
-            this.buttonCreateAccount.TabIndex = 6;
-            this.buttonCreateAccount.Text = "Create Account";
-            this.buttonCreateAccount.UseVisualStyleBackColor = false;
-            this.buttonCreateAccount.Click += new System.EventHandler(this.buttonCreateAccount_Click);
-            // 
-            // textBoxFirstname
-            // 
-            this.textBoxFirstname.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxFirstname.ForeColor = System.Drawing.Color.Gray;
-            this.textBoxFirstname.Location = new System.Drawing.Point(457, 84);
-            this.textBoxFirstname.Multiline = true;
-            this.textBoxFirstname.Name = "textBoxFirstname";
-            this.textBoxFirstname.Size = new System.Drawing.Size(331, 34);
-            this.textBoxFirstname.TabIndex = 201;
-            this.textBoxFirstname.Text = "Search";
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
@@ -238,78 +186,77 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // modify_User1
+            // viewUsers
             // 
-            this.modify_User1.Location = new System.Drawing.Point(157, 0);
-            this.modify_User1.Name = "modify_User1";
-            this.modify_User1.Size = new System.Drawing.Size(347, 621);
-            this.modify_User1.TabIndex = 203;
-            // 
-            // create_User1
-            // 
-            this.create_User1.Location = new System.Drawing.Point(157, 0);
-            this.create_User1.Name = "create_User1";
-            this.create_User1.Size = new System.Drawing.Size(347, 614);
-            this.create_User1.TabIndex = 202;
+            this.viewUsers.Location = new System.Drawing.Point(155, -3);
+            this.viewUsers.Name = "viewUsers";
+            this.viewUsers.Size = new System.Drawing.Size(777, 614);
+            this.viewUsers.TabIndex = 205;
             // 
             // homePage1
             // 
             this.homePage1.BackColor = System.Drawing.Color.Gold;
-            this.homePage1.Location = new System.Drawing.Point(157, 0);
+            this.homePage1.Location = new System.Drawing.Point(585, 0);
             this.homePage1.Name = "homePage1";
-            this.homePage1.Size = new System.Drawing.Size(347, 621);
+            this.homePage1.Size = new System.Drawing.Size(347, 614);
             this.homePage1.TabIndex = 204;
+            // 
+            // create_User1
+            // 
+            this.create_User1.Location = new System.Drawing.Point(209, 0);
+            this.create_User1.Name = "create_User1";
+            this.create_User1.Size = new System.Drawing.Size(347, 614);
+            this.create_User1.TabIndex = 202;
+            // 
+            // modify_User1
+            // 
+            this.modify_User1.Location = new System.Drawing.Point(209, 0);
+            this.modify_User1.Name = "modify_User1";
+            this.modify_User1.Size = new System.Drawing.Size(347, 621);
+            this.modify_User1.TabIndex = 203;
             // 
             // AdminPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(502, 610);
+            this.ClientSize = new System.Drawing.Size(931, 610);
+            this.Controls.Add(this.viewUsers);
             this.Controls.Add(this.homePage1);
-            this.Controls.Add(this.modify_User1);
             this.Controls.Add(this.create_User1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBoxFirstname);
-            this.Controls.Add(this.buttonCreateAccount);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.modify_User1);
             this.Name = "AdminPanel";
             this.Text = "Administrator Panel";
             this.Load += new System.EventHandler(this.AdminPanel_Load);
             ((System.ComponentModel.ISupportInitialize)(this.sienaDBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sienaDBDataSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sienaDBDataSetBindingSource1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
         private System.Windows.Forms.BindingSource sienaDBDataSetBindingSource;
         private SienaDBDataSet sienaDBDataSet;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.BindingSource sienaDBDataSetBindingSource1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button buttonCreateAccount;
-        private System.Windows.Forms.TextBox textBoxFirstname;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label greetingLabel;
         private System.Windows.Forms.Button btnViewUsers;
         private System.Windows.Forms.Button btnManageUser;
         private System.Windows.Forms.Button btnCreateUser;
-        private Create_User create_User1;
         private System.Windows.Forms.Button btnViewCourses;
         private System.Windows.Forms.Button btnManageCourse;
         private System.Windows.Forms.Button btnCreateCourse;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
+        private Create_User create_User1;
         private Modify_User modify_User1;
         private HomePage homePage1;
+        private ViewUsers viewUsers;
     }
 }

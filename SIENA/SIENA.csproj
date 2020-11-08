@@ -119,6 +119,15 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>SienaDBDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="ViewUsers.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewUsers.Designer.cs">
+      <DependentUpon>ViewUsers.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ViewUsers.resx">
+      <DependentUpon>ViewUsers.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="DataClass.dbml.layout">
       <DependentUpon>DataClass.dbml</DependentUpon>
     </None>
