@@ -28,11 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewUsers));
             this.userDataTable = new System.Windows.Forms.DataGridView();
             this.addUser = new System.Windows.Forms.Label();
-            this.btnSearchBox = new System.Windows.Forms.Button();
-            this.txtSearchBox = new System.Windows.Forms.TextBox();
+            this.linkRefresh = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.userDataTable)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,30 +53,22 @@
             this.addUser.TabIndex = 2;
             this.addUser.Text = "View Users";
             // 
-            // btnSearchBox
+            // linkRefresh
             // 
-            this.btnSearchBox.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSearchBox.BackgroundImage")));
-            this.btnSearchBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnSearchBox.Location = new System.Drawing.Point(546, 34);
-            this.btnSearchBox.Name = "btnSearchBox";
-            this.btnSearchBox.Size = new System.Drawing.Size(25, 25);
-            this.btnSearchBox.TabIndex = 83;
-            this.btnSearchBox.UseVisualStyleBackColor = true;
-            // 
-            // txtSearchBox
-            // 
-            this.txtSearchBox.Location = new System.Drawing.Point(213, 37);
-            this.txtSearchBox.Name = "txtSearchBox";
-            this.txtSearchBox.Size = new System.Drawing.Size(334, 20);
-            this.txtSearchBox.TabIndex = 82;
-            this.txtSearchBox.Text = "Search account";
+            this.linkRefresh.AutoSize = true;
+            this.linkRefresh.Location = new System.Drawing.Point(500, 45);
+            this.linkRefresh.Name = "linkRefresh";
+            this.linkRefresh.Size = new System.Drawing.Size(70, 13);
+            this.linkRefresh.TabIndex = 3;
+            this.linkRefresh.TabStop = true;
+            this.linkRefresh.Text = "Refresh View";
+            this.linkRefresh.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkRefresh_LinkClicked);
             // 
             // ViewUsers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.btnSearchBox);
-            this.Controls.Add(this.txtSearchBox);
+            this.Controls.Add(this.linkRefresh);
             this.Controls.Add(this.addUser);
             this.Controls.Add(this.userDataTable);
             this.Name = "ViewUsers";
@@ -93,7 +83,6 @@
         #endregion
         private System.Windows.Forms.DataGridView userDataTable;
         private System.Windows.Forms.Label addUser;
-        private System.Windows.Forms.Button btnSearchBox;
-        private System.Windows.Forms.TextBox txtSearchBox;
+        private System.Windows.Forms.LinkLabel linkRefresh;
     }
 }

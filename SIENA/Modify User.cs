@@ -18,6 +18,52 @@ namespace SIENA
             InitializeComponent();
         }
 
+        private void disableControls()
+        {
+            txtEmail.Enabled = false;
+            txtFname.Enabled = false;
+            txtLname.Enabled = false;
+            txtMname.Enabled = false;
+            txtMobile.Enabled = false;
+            txtPwd.Enabled = false;
+            txtUname.Enabled = false;
+            rbAdmin.Enabled = false;
+            rbFaculty.Enabled = false;
+            rbFemale.Enabled = false;
+            rbMale.Enabled = false;
+            rbStudent.Enabled = false;
+            rtbAddress.Enabled = false;
+            dtpBirthDate.Enabled = false;
+            dtpJoined.Enabled = false;
+            cbCourse.Enabled = false;
+            cbDept.Enabled = false;
+            checkEnabled.Enabled = false;
+            btnUpdateUser.Enabled = false;
+        }
+
+        private void enableControls()
+        {
+            txtEmail.Enabled = true;
+            txtFname.Enabled = true;
+            txtLname.Enabled = true;
+            txtMname.Enabled = true;
+            txtMobile.Enabled = true;
+            txtPwd.Enabled = true;
+            txtUname.Enabled = true;
+            rbAdmin.Enabled = true;
+            rbFaculty.Enabled = true;
+            rbFemale.Enabled = true;
+            rbMale.Enabled = true;
+            rbStudent.Enabled = true;
+            rtbAddress.Enabled = true;
+            dtpBirthDate.Enabled = true;
+            dtpJoined.Enabled = true;
+            cbCourse.Enabled = true;
+            cbDept.Enabled = true;
+            checkEnabled.Enabled = true;
+            btnUpdateUser.Enabled = true;
+        }
+
         private void btnSearchBox_Click(object sender, EventArgs e)
         {
             SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\SienaDB.mdf;Integrated Security=True"); //creates connection to database   
@@ -35,6 +81,7 @@ namespace SIENA
             }
             else
             {
+                enableControls();
                 DataClassDataContext dbctx = new DataClassDataContext();
 
                 var getData =
@@ -111,7 +158,7 @@ namespace SIENA
 
         private void Modify_User_Load(object sender, EventArgs e)
         {
-
+            disableControls();
         }
 
         private void btnUpdateUser_Click(object sender, EventArgs e)

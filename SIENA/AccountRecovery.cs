@@ -21,36 +21,49 @@ namespace SIENA
 
         private void btnForgotSubmit_Click(object sender, EventArgs e)
         {
-            PasswordGenerator pg = new PasswordGenerator();
-
-            string newPassword = pg.RandomPassword();
-
-            DataClassDataContext dbCtx = new DataClassDataContext();
-
-            var getData = (
-
-                from x in dbCtx.Users
-                where x.Username.Equals(txtForgotUname.Text)
-                select x
-            ).ToList().Last();
-
-            getData.Password = newPassword;
-
-            try
+            if (txtForgotUname.Text.Equals(""))
             {
-                dbCtx.SubmitChanges();
-                new EmailClass().SendPasswordResetEmail(getData);
-                MessageBox.Show("Updated! Your new password is "+newPassword);
+                MessageBox.Show("Please enter username.");
             }
-            catch (Exception exe)
+            else
             {
-                MessageBox.Show(exe.ToString());
+                PasswordGenerator pg = new PasswordGenerator();
+
+                string newPassword = pg.RandomPassword();
+
+                DataClassDataContext dbCtx = new DataClassDataContext();
+
+                var getData = (
+
+                    from x in dbCtx.Users
+                    where x.Username.Equals(txtForgotUname.Text)
+                    select x
+                ).ToList().Last();
+
+                getData.Password = newPassword;
+
+                try
+                {
+                    dbCtx.SubmitChanges();
+                    new EmailClass().SendPasswordResetEmail(getData);
+                    MessageBox.Show("Your password has been reset.\nPlease check your email for the new password.");
+                }
+                catch (Exception exe)
+                {
+                    MessageBox.Show(exe.ToString());
+                }
             }
         }
 
         private void AccountRecovery_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new Login().Show();
         }
     }
 }

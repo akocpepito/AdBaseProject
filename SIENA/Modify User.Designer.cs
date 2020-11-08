@@ -33,9 +33,7 @@
             this.label18 = new System.Windows.Forms.Label();
             this.rtbAddress = new System.Windows.Forms.RichTextBox();
             this.label17 = new System.Windows.Forms.Label();
-            this.btnResetForm = new System.Windows.Forms.Button();
             this.btnUpdateUser = new System.Windows.Forms.Button();
-            this.btnGeneratePwd = new System.Windows.Forms.Button();
             this.txtPwd = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.txtMobile = new System.Windows.Forms.TextBox();
@@ -117,35 +115,16 @@
             this.label17.TabIndex = 74;
             this.label17.Text = "label17";
             // 
-            // btnResetForm
-            // 
-            this.btnResetForm.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.btnResetForm.Location = new System.Drawing.Point(263, 568);
-            this.btnResetForm.Name = "btnResetForm";
-            this.btnResetForm.Size = new System.Drawing.Size(94, 36);
-            this.btnResetForm.TabIndex = 73;
-            this.btnResetForm.Text = "Reset Form";
-            this.btnResetForm.UseVisualStyleBackColor = false;
-            // 
             // btnUpdateUser
             // 
             this.btnUpdateUser.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.btnUpdateUser.Location = new System.Drawing.Point(363, 568);
+            this.btnUpdateUser.Location = new System.Drawing.Point(288, 567);
             this.btnUpdateUser.Name = "btnUpdateUser";
             this.btnUpdateUser.Size = new System.Drawing.Size(94, 36);
             this.btnUpdateUser.TabIndex = 72;
             this.btnUpdateUser.Text = "Update User";
             this.btnUpdateUser.UseVisualStyleBackColor = false;
             this.btnUpdateUser.Click += new System.EventHandler(this.btnUpdateUser_Click);
-            // 
-            // btnGeneratePwd
-            // 
-            this.btnGeneratePwd.Location = new System.Drawing.Point(237, 514);
-            this.btnGeneratePwd.Name = "btnGeneratePwd";
-            this.btnGeneratePwd.Size = new System.Drawing.Size(110, 23);
-            this.btnGeneratePwd.TabIndex = 71;
-            this.btnGeneratePwd.Text = "Generate Password";
-            this.btnGeneratePwd.UseVisualStyleBackColor = true;
             // 
             // txtPwd
             // 
@@ -521,9 +500,7 @@
             this.Controls.Add(this.label18);
             this.Controls.Add(this.rtbAddress);
             this.Controls.Add(this.label17);
-            this.Controls.Add(this.btnResetForm);
             this.Controls.Add(this.btnUpdateUser);
-            this.Controls.Add(this.btnGeneratePwd);
             this.Controls.Add(this.txtPwd);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.txtMobile);
@@ -572,9 +549,7 @@
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.RichTextBox rtbAddress;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Button btnResetForm;
         private System.Windows.Forms.Button btnUpdateUser;
-        private System.Windows.Forms.Button btnGeneratePwd;
         private System.Windows.Forms.TextBox txtPwd;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.TextBox txtMobile;

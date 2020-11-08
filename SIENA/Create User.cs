@@ -97,7 +97,7 @@ namespace SIENA
             try
             {
                 newUserDbCtx.SubmitChanges();
-                //sendEmailConfirmation(newUser);
+                new EmailClass().SendConfirmationEmail(newUser);
                 MessageBox.Show("The account has been created.");
                 clearForm();
             }
