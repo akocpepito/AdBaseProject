@@ -69,7 +69,7 @@ namespace SIENA
 
                     else if (checkUserType.Rows[0][0].ToString().Equals("Student"))
                     {
-                        MessageBox.Show("Welcome " + dt.Rows[0][3].ToString());
+                        MessageBox.Show("Welcome " + dt.Rows[0][3].ToString()+"\n Feature is still unavailable.\n Please try again later.");
                     }
                 }
             }
