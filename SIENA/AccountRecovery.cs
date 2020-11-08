@@ -21,9 +21,17 @@ namespace SIENA
 
         private void btnForgotSubmit_Click(object sender, EventArgs e)
         {
-            if (txtForgotUname.Text.Equals(""))
+            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\SienaDB.mdf;Integrated Security=True"); //creates connection to database   
+            SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM Users WHERE username='" +txtForgotUname.Text+"'", con); //checks if values entered are in database
+
+            DataTable dt = new DataTable(); //creates a virtual table for the check  
+            DataView dv = new DataView(dt);
+
+            sda.Fill(dt);
+
+            if (dt.Rows.Count == 0)
             {
-                MessageBox.Show("Please enter username.");
+                MessageBox.Show("Invalid username or password");
             }
             else
             {
