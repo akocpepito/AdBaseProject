@@ -29,20 +29,20 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewUsers));
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.userDataTable = new System.Windows.Forms.DataGridView();
             this.addUser = new System.Windows.Forms.Label();
             this.btnSearchBox = new System.Windows.Forms.Button();
             this.txtSearchBox = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userDataTable)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // userDataTable
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(14, 74);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(719, 463);
-            this.dataGridView1.TabIndex = 1;
+            this.userDataTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.userDataTable.Location = new System.Drawing.Point(14, 74);
+            this.userDataTable.Name = "userDataTable";
+            this.userDataTable.Size = new System.Drawing.Size(739, 509);
+            this.userDataTable.TabIndex = 1;
             // 
             // addUser
             // 
@@ -58,7 +58,7 @@
             // 
             this.btnSearchBox.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSearchBox.BackgroundImage")));
             this.btnSearchBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnSearchBox.Location = new System.Drawing.Point(708, 34);
+            this.btnSearchBox.Location = new System.Drawing.Point(729, 34);
             this.btnSearchBox.Name = "btnSearchBox";
             this.btnSearchBox.Size = new System.Drawing.Size(25, 25);
             this.btnSearchBox.TabIndex = 83;
@@ -66,7 +66,7 @@
             // 
             // txtSearchBox
             // 
-            this.txtSearchBox.Location = new System.Drawing.Point(375, 37);
+            this.txtSearchBox.Location = new System.Drawing.Point(396, 37);
             this.txtSearchBox.Name = "txtSearchBox";
             this.txtSearchBox.Size = new System.Drawing.Size(334, 20);
             this.txtSearchBox.TabIndex = 82;
@@ -79,17 +79,18 @@
             this.Controls.Add(this.btnSearchBox);
             this.Controls.Add(this.txtSearchBox);
             this.Controls.Add(this.addUser);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.userDataTable);
             this.Name = "ViewUsers";
-            this.Size = new System.Drawing.Size(777, 540);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Size = new System.Drawing.Size(777, 602);
+            this.Load += new System.EventHandler(this.ViewUsers_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.userDataTable)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView userDataTable;
         private System.Windows.Forms.Label addUser;
         private System.Windows.Forms.Button btnSearchBox;
         private System.Windows.Forms.TextBox txtSearchBox;
