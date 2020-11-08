@@ -13,9 +13,13 @@ namespace SIENA
 {
     public partial class AdminPanel : Form
     {
-        public AdminPanel()
+
+        string userName;
+        public AdminPanel(string uname)
         {
             InitializeComponent();
+            userName = uname;
+            greetingLabel.Text = greetingLabel.Text + userName + "!";
         }
 
         private void buttonCreateAccount_Click(object sender, EventArgs e)

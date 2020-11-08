@@ -58,9 +58,13 @@ namespace SIENA
 
                     if (checkUserType.Rows[0][0].ToString().Equals("Administrator"))
                     {
-                        MessageBox.Show("Welcome " + dt.Rows[0][3].ToString() + "\n You are an admin");
+                        DataTable userName = dv.ToTable(true, "First Name");
+                        string name = userName.Rows[0][0].ToString();
+
+                        MessageBox.Show("Welcome " + name + "\n You are an admin");
                         this.Visible = false;
-                        new AdminPanel().Show();
+                        
+                        new AdminPanel(name).Show();
                     }
 
                     else if (checkUserType.Rows[0][0].ToString().Equals("Student"))
