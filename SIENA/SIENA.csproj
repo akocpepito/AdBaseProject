@@ -48,7 +48,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System" />
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    </Reference>
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Linq" />
     <Reference Include="System.Xml.Linq" />
@@ -62,6 +64,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Create User.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Create User.Designer.cs">
+      <DependentUpon>Create User.cs</DependentUpon>
+    </Compile>
     <Compile Include="Panels\AdminPanel.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,6 +111,9 @@
     </None>
     <EmbeddedResource Include="AccountRecovery.resx">
       <DependentUpon>AccountRecovery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Create User.resx">
+      <DependentUpon>Create User.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Panels\AdminPanel.resx">
       <DependentUpon>AdminPanel.cs</DependentUpon>

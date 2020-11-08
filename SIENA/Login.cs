@@ -47,7 +47,7 @@ namespace SIENA
                 
                 DataTable enabledCheck = dv.ToTable(true, "Enabled");
 
-                if (!enabledCheck.Rows[0][0].ToString().Equals("yes"))
+                if (!enabledCheck.Rows[0][0].ToString().Equals("Yes"))
 
                 {
                     MessageBox.Show("Your account has not yet been activated.\nPlease contact your administrator.");
@@ -56,14 +56,14 @@ namespace SIENA
                 {
                     DataTable checkUserType = dv.ToTable(true, "User Type");
 
-                    if (checkUserType.Rows[0][0].ToString().Equals("admin"))
+                    if (checkUserType.Rows[0][0].ToString().Equals("Administrator"))
                     {
                         MessageBox.Show("Welcome " + dt.Rows[0][3].ToString() + "\n You are an admin");
                         this.Visible = false;
                         new AdminPanel().Show();
                     }
 
-                    else if (checkUserType.Rows[0][0].ToString().Equals("user"))
+                    else if (checkUserType.Rows[0][0].ToString().Equals("Student"))
                     {
                         MessageBox.Show("Welcome " + dt.Rows[0][3].ToString());
                     }

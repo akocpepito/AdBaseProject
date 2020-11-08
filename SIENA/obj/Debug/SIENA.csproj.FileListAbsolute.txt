@@ -3,7 +3,6 @@ C:\Users\Jr\source\repos\SIENA\SIENA\bin\Debug\SienaDB_log.ldf
 C:\Users\Jr\source\repos\SIENA\SIENA\bin\Debug\SIENA.exe.config
 C:\Users\Jr\source\repos\SIENA\SIENA\bin\Debug\SIENA.exe
 C:\Users\Jr\source\repos\SIENA\SIENA\bin\Debug\SIENA.pdb
-C:\Users\Jr\source\repos\SIENA\SIENA\obj\Debug\SIENA.csprojAssemblyReference.cache
 C:\Users\Jr\source\repos\SIENA\SIENA\obj\Debug\SIENA.Properties.Resources.resources
 C:\Users\Jr\source\repos\SIENA\SIENA\obj\Debug\SIENA.csproj.GenerateResource.cache
 C:\Users\Jr\source\repos\SIENA\SIENA\obj\Debug\SIENA.csproj.CoreCompileInputs.cache
@@ -28,3 +27,5 @@ D:\ProgramData\Projects Visual Studio\AdBaseProject\SIENA\obj\Debug\SIENA.AdminP
 D:\ProgramData\Projects Visual Studio\AdBaseProject\SIENA\obj\Debug\SIENA.Panels.RegisterPanel.resources
 C:\Users\Jr\source\repos\SIENA\SIENA\obj\Debug\SIENA.AdminPanel.resources
 C:\Users\Jr\source\repos\SIENA\SIENA\obj\Debug\SIENA.Panels.RegisterPanel.resources
+C:\Users\Jr\source\repos\SIENA\SIENA\obj\Debug\SIENA.Create_User.resources
+C:\Users\Jr\source\repos\SIENA\SIENA\obj\Debug\SIENA.csprojAssemblyReference.cache

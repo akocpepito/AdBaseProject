@@ -24,5 +24,20 @@ namespace SIENA
             RegisterPanel registerPanel = new RegisterPanel();
             registerPanel.Show();
         }
+
+        private void btnCreateUser_Click(object sender, EventArgs e)
+        {
+            create_User1.Visible = true;
+        }
+
+        private void btnManageUser_Click(object sender, EventArgs e)
+        {
+            create_User1.Visible = false;
+        }
+
+        private void btnViewUsers_Click(object sender, EventArgs e)
+        {
+            create_User1.Visible = false;
+        }
     }
 }
