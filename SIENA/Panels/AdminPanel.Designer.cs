@@ -35,20 +35,22 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.sienaDBDataSetBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnViewCourses = new System.Windows.Forms.Button();
+            this.btnManageCourse = new System.Windows.Forms.Button();
+            this.btnCreateCourse = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.btnViewUsers = new System.Windows.Forms.Button();
             this.btnManageUser = new System.Windows.Forms.Button();
             this.btnCreateUser = new System.Windows.Forms.Button();
             this.greetingLabel = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.buttonCreateAccount = new System.Windows.Forms.Button();
             this.textBoxFirstname = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.modify_User1 = new SIENA.Modify_User();
             this.create_User1 = new SIENA.Create_User();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.btnViewCourses = new System.Windows.Forms.Button();
-            this.btnManageCourse = new System.Windows.Forms.Button();
-            this.btnCreateCourse = new System.Windows.Forms.Button();
+            this.homePage1 = new SIENA.HomePage();
             ((System.ComponentModel.ISupportInitialize)(this.sienaDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sienaDBDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -97,12 +99,59 @@
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Location = new System.Drawing.Point(-1, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(167, 614);
+            this.panel2.Size = new System.Drawing.Size(161, 614);
             this.panel2.TabIndex = 3;
+            // 
+            // btnViewCourses
+            // 
+            this.btnViewCourses.Location = new System.Drawing.Point(13, 361);
+            this.btnViewCourses.Name = "btnViewCourses";
+            this.btnViewCourses.Size = new System.Drawing.Size(137, 35);
+            this.btnViewCourses.TabIndex = 209;
+            this.btnViewCourses.Text = "View Courses";
+            this.btnViewCourses.UseVisualStyleBackColor = true;
+            // 
+            // btnManageCourse
+            // 
+            this.btnManageCourse.Location = new System.Drawing.Point(13, 324);
+            this.btnManageCourse.Name = "btnManageCourse";
+            this.btnManageCourse.Size = new System.Drawing.Size(137, 35);
+            this.btnManageCourse.TabIndex = 208;
+            this.btnManageCourse.Text = "Manage Course";
+            this.btnManageCourse.UseVisualStyleBackColor = true;
+            // 
+            // btnCreateCourse
+            // 
+            this.btnCreateCourse.Location = new System.Drawing.Point(13, 288);
+            this.btnCreateCourse.Name = "btnCreateCourse";
+            this.btnCreateCourse.Size = new System.Drawing.Size(137, 35);
+            this.btnCreateCourse.TabIndex = 207;
+            this.btnCreateCourse.Text = "Create Course";
+            this.btnCreateCourse.UseVisualStyleBackColor = true;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(13, 267);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(122, 13);
+            this.label3.TabIndex = 206;
+            this.label3.Text = "Course Management";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(13, 126);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(109, 13);
+            this.label1.TabIndex = 205;
+            this.label1.Text = "User Management";
             // 
             // btnViewUsers
             // 
-            this.btnViewUsers.Location = new System.Drawing.Point(13, 208);
+            this.btnViewUsers.Location = new System.Drawing.Point(13, 218);
             this.btnViewUsers.Name = "btnViewUsers";
             this.btnViewUsers.Size = new System.Drawing.Size(137, 35);
             this.btnViewUsers.TabIndex = 204;
@@ -112,7 +161,7 @@
             // 
             // btnManageUser
             // 
-            this.btnManageUser.Location = new System.Drawing.Point(13, 176);
+            this.btnManageUser.Location = new System.Drawing.Point(13, 181);
             this.btnManageUser.Name = "btnManageUser";
             this.btnManageUser.Size = new System.Drawing.Size(137, 35);
             this.btnManageUser.TabIndex = 203;
@@ -139,16 +188,6 @@
             this.greetingLabel.Size = new System.Drawing.Size(63, 13);
             this.greetingLabel.TabIndex = 1;
             this.greetingLabel.Text = "Welcome ";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(22, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(111, 59);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // label2
             // 
@@ -188,59 +227,38 @@
             this.textBoxFirstname.TabIndex = 201;
             this.textBoxFirstname.Text = "Search";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(22, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(111, 59);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // modify_User1
+            // 
+            this.modify_User1.Location = new System.Drawing.Point(157, 0);
+            this.modify_User1.Name = "modify_User1";
+            this.modify_User1.Size = new System.Drawing.Size(347, 621);
+            this.modify_User1.TabIndex = 203;
+            // 
             // create_User1
             // 
             this.create_User1.Location = new System.Drawing.Point(157, 0);
-            this.create_User1.Name = "add_User1";
+            this.create_User1.Name = "create_User1";
             this.create_User1.Size = new System.Drawing.Size(347, 614);
             this.create_User1.TabIndex = 202;
             // 
-            // label1
+            // homePage1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(13, 126);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(109, 13);
-            this.label1.TabIndex = 205;
-            this.label1.Text = "User Management";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(13, 262);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(122, 13);
-            this.label3.TabIndex = 206;
-            this.label3.Text = "Course Management";
-            // 
-            // btnViewCourses
-            // 
-            this.btnViewCourses.Location = new System.Drawing.Point(13, 351);
-            this.btnViewCourses.Name = "btnViewCourses";
-            this.btnViewCourses.Size = new System.Drawing.Size(137, 35);
-            this.btnViewCourses.TabIndex = 209;
-            this.btnViewCourses.Text = "View Courses";
-            this.btnViewCourses.UseVisualStyleBackColor = true;
-            // 
-            // btnManageCourse
-            // 
-            this.btnManageCourse.Location = new System.Drawing.Point(13, 319);
-            this.btnManageCourse.Name = "btnManageCourse";
-            this.btnManageCourse.Size = new System.Drawing.Size(137, 35);
-            this.btnManageCourse.TabIndex = 208;
-            this.btnManageCourse.Text = "Manage Course";
-            this.btnManageCourse.UseVisualStyleBackColor = true;
-            // 
-            // btnCreateCourse
-            // 
-            this.btnCreateCourse.Location = new System.Drawing.Point(13, 288);
-            this.btnCreateCourse.Name = "btnCreateCourse";
-            this.btnCreateCourse.Size = new System.Drawing.Size(137, 35);
-            this.btnCreateCourse.TabIndex = 207;
-            this.btnCreateCourse.Text = "Create Course";
-            this.btnCreateCourse.UseVisualStyleBackColor = true;
+            this.homePage1.BackColor = System.Drawing.Color.Gold;
+            this.homePage1.Location = new System.Drawing.Point(157, 0);
+            this.homePage1.Name = "homePage1";
+            this.homePage1.Size = new System.Drawing.Size(347, 621);
+            this.homePage1.TabIndex = 204;
             // 
             // AdminPanel
             // 
@@ -248,6 +266,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(502, 610);
+            this.Controls.Add(this.homePage1);
+            this.Controls.Add(this.modify_User1);
             this.Controls.Add(this.create_User1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBoxFirstname);
@@ -256,6 +276,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Name = "AdminPanel";
             this.Text = "Administrator Panel";
+            this.Load += new System.EventHandler(this.AdminPanel_Load);
             ((System.ComponentModel.ISupportInitialize)(this.sienaDBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sienaDBDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -288,5 +309,7 @@
         private System.Windows.Forms.Button btnCreateCourse;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
+        private Modify_User modify_User1;
+        private HomePage homePage1;
     }
 }

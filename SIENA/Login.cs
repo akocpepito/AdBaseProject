@@ -87,5 +87,11 @@ namespace SIENA
         {
             labelGoToSignUp.ForeColor = Color.White;
         }
+
+        private void forgotPWlink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Visible = false;
+            new AccountRecovery().Show();
+        }
     }
 }

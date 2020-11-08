@@ -17,6 +17,7 @@ namespace SIENA
             InitializeComponent();
         }
 
+        // Initializes combo boxes and datetimepickers
         private void Create_User_Load(object sender, EventArgs e)
         {
             cbCourse.Items.Add("BS in Computer Science");
@@ -39,6 +40,7 @@ namespace SIENA
             cbDept.Items.Add("Arts & Sciences");
         }
 
+        // Clears all entries on the form
         private void clearForm()
         {
             txtEmail.Text = "";
@@ -62,7 +64,7 @@ namespace SIENA
            
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnCreateUser_Click(object sender, EventArgs e)
         {
             User newUser = new User();
             newUser.First_Name = txtFname.Text;
@@ -75,9 +77,10 @@ namespace SIENA
             newUser.BirthDate = dtpBirthDate.Value;
             newUser.Year_Joined = dtpJoined.Value;
             newUser.Address = rtbAddress.Text;
-            newUser.Gender = groupUser.Controls.OfType<RadioButton>().FirstOrDefault(r => r.Checked).Text;
+            newUser.Gender = groupGender.Controls.OfType<RadioButton>().FirstOrDefault(r => r.Checked).Text;
             newUser.Course = cbCourse.Text;
             newUser.Department = cbDept.Text;
+            newUser.Mobile = txtMobile.Text;
 
             if (checkEnabled.Checked)
             {
@@ -111,6 +114,13 @@ namespace SIENA
         private void btnResetForm_Click(object sender, EventArgs e)
         {
             clearForm();
+        }
+
+        private void btnGeneratePwd_Click(object sender, EventArgs e)
+        {
+            PasswordGenerator pg = new PasswordGenerator();
+
+            txtPwd.Text = pg.RandomPassword();
         }
     }
 }

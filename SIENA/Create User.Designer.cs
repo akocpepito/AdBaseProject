@@ -62,7 +62,7 @@
             this.txtPwd = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.btnGeneratePwd = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnCreateUser = new System.Windows.Forms.Button();
             this.btnResetForm = new System.Windows.Forms.Button();
             this.label17 = new System.Windows.Forms.Label();
             this.rtbAddress = new System.Windows.Forms.RichTextBox();
@@ -386,17 +386,18 @@
             this.btnGeneratePwd.TabIndex = 34;
             this.btnGeneratePwd.Text = "Generate Password";
             this.btnGeneratePwd.UseVisualStyleBackColor = true;
+            this.btnGeneratePwd.Click += new System.EventHandler(this.btnGeneratePwd_Click);
             // 
-            // button1
+            // btnCreateUser
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.button1.Location = new System.Drawing.Point(236, 569);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(94, 36);
-            this.button1.TabIndex = 35;
-            this.button1.Text = "Create User";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnCreateUser.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.btnCreateUser.Location = new System.Drawing.Point(236, 569);
+            this.btnCreateUser.Name = "btnCreateUser";
+            this.btnCreateUser.Size = new System.Drawing.Size(94, 36);
+            this.btnCreateUser.TabIndex = 35;
+            this.btnCreateUser.Text = "Create User";
+            this.btnCreateUser.UseVisualStyleBackColor = false;
+            this.btnCreateUser.Click += new System.EventHandler(this.btnCreateUser_Click);
             // 
             // btnResetForm
             // 
@@ -477,7 +478,7 @@
             this.Controls.Add(this.rtbAddress);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.btnResetForm);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnCreateUser);
             this.Controls.Add(this.btnGeneratePwd);
             this.Controls.Add(this.txtPwd);
             this.Controls.Add(this.label16);
@@ -557,7 +558,7 @@
         private System.Windows.Forms.TextBox txtPwd;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Button btnGeneratePwd;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnCreateUser;
         private System.Windows.Forms.Button btnResetForm;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.RichTextBox rtbAddress;

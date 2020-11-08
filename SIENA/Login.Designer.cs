@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.labelGoToSignUp = new System.Windows.Forms.Label();
             this.buttonLogin = new System.Windows.Forms.Button();
             this.txtPassword = new System.Windows.Forms.TextBox();
@@ -37,7 +37,8 @@
             this.txtUname = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.forgotPWlink = new System.Windows.Forms.LinkLabel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -47,6 +48,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(24)))), ((int)(((byte)(34)))));
+            this.panel1.Controls.Add(this.forgotPWlink);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.labelGoToSignUp);
             this.panel1.Controls.Add(this.buttonLogin);
@@ -61,16 +63,16 @@
             this.panel1.Size = new System.Drawing.Size(474, 464);
             this.panel1.TabIndex = 0;
             // 
-            // label2
+            // label1
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft YaHei", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.MediumBlue;
-            this.label2.Location = new System.Drawing.Point(107, 31);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(283, 42);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Welcome to STI!";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(183)))), ((int)(((byte)(19)))));
+            this.label1.Location = new System.Drawing.Point(28, 127);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(92, 36);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Login";
             // 
             // labelGoToSignUp
             // 
@@ -95,7 +97,7 @@
             this.buttonLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonLogin.ForeColor = System.Drawing.Color.White;
-            this.buttonLogin.Location = new System.Drawing.Point(34, 329);
+            this.buttonLogin.Location = new System.Drawing.Point(34, 340);
             this.buttonLogin.Name = "buttonLogin";
             this.buttonLogin.Size = new System.Drawing.Size(406, 60);
             this.buttonLogin.TabIndex = 5;
@@ -106,7 +108,7 @@
             // txtPassword
             // 
             this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.Location = new System.Drawing.Point(90, 266);
+            this.txtPassword.Location = new System.Drawing.Point(90, 259);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(350, 44);
             this.txtPassword.TabIndex = 4;
@@ -115,7 +117,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::SIENA.Properties.Resources._lock;
-            this.pictureBox2.Location = new System.Drawing.Point(34, 260);
+            this.pictureBox2.Location = new System.Drawing.Point(34, 253);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(50, 50);
             this.pictureBox2.TabIndex = 3;
@@ -124,7 +126,7 @@
             // txtUname
             // 
             this.txtUname.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUname.Location = new System.Drawing.Point(90, 190);
+            this.txtUname.Location = new System.Drawing.Point(90, 183);
             this.txtUname.Multiline = true;
             this.txtUname.Name = "txtUname";
             this.txtUname.Size = new System.Drawing.Size(350, 50);
@@ -133,7 +135,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::SIENA.Properties.Resources.user;
-            this.pictureBox1.Location = new System.Drawing.Point(34, 190);
+            this.pictureBox1.Location = new System.Drawing.Point(34, 183);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(50, 50);
             this.pictureBox1.TabIndex = 1;
@@ -148,16 +150,29 @@
             this.panel2.Size = new System.Drawing.Size(480, 101);
             this.panel2.TabIndex = 0;
             // 
-            // label1
+            // label2
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(183)))), ((int)(((byte)(19)))));
-            this.label1.Location = new System.Drawing.Point(28, 127);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(92, 36);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "Login";
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft YaHei", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.MediumBlue;
+            this.label2.Location = new System.Drawing.Point(107, 31);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(283, 42);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Welcome to STI!";
+            // 
+            // forgotPWlink
+            // 
+            this.forgotPWlink.AutoSize = true;
+            this.forgotPWlink.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.forgotPWlink.LinkColor = System.Drawing.Color.Yellow;
+            this.forgotPWlink.Location = new System.Drawing.Point(324, 310);
+            this.forgotPWlink.Name = "forgotPWlink";
+            this.forgotPWlink.Size = new System.Drawing.Size(116, 16);
+            this.forgotPWlink.TabIndex = 9;
+            this.forgotPWlink.TabStop = true;
+            this.forgotPWlink.Text = "Forgot password?";
+            this.forgotPWlink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.forgotPWlink_LinkClicked);
             // 
             // Login
             // 
@@ -190,6 +205,7 @@
         private System.Windows.Forms.Label labelGoToSignUp;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.LinkLabel forgotPWlink;
     }
 }
 

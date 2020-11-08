@@ -27,17 +27,37 @@ namespace SIENA
 
         private void btnCreateUser_Click(object sender, EventArgs e)
         {
+            homePage1.Visible = false;
             create_User1.Visible = true;
+            modify_User1.Visible = false;
         }
 
         private void btnManageUser_Click(object sender, EventArgs e)
         {
+            homePage1.Visible = false;
             create_User1.Visible = false;
+            modify_User1.Visible = true;
         }
 
         private void btnViewUsers_Click(object sender, EventArgs e)
         {
+            homePage1.Visible = false;
             create_User1.Visible = false;
+            modify_User1.Visible = false;
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            homePage1.Visible = true;
+            create_User1.Visible = false;
+            modify_User1.Visible = false;
+        }
+
+        private void AdminPanel_Load(object sender, EventArgs e)
+        {
+            homePage1.Visible = true;
+            create_User1.Visible = false;
+            modify_User1.Visible = false;
         }
     }
 }
