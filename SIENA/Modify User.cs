@@ -108,5 +108,58 @@ namespace SIENA
             }
 
         }
+
+        private void Modify_User_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnUpdateUser_Click(object sender, EventArgs e)
+        {
+
+            DataClassDataContext dbctx = new DataClassDataContext();
+
+            var getData =
+                (
+                from x in dbctx.Users
+                where x.Username.Equals(txtSearchBox.Text)
+                select x
+                ).ToList().Last();
+
+            getData.Email_address  = txtEmail.Text;
+            getData.First_Name = txtFname.Text;
+            getData.Last_Name = txtLname.Text;
+            getData.Middle_Name = txtMname.Text;
+            getData.Mobile = txtMobile.Text;
+            getData.Password = txtPwd.Text;
+            getData.Username = txtUname.Text;
+            getData.Address = rtbAddress.Text;
+            getData.BirthDate = dtpBirthDate.Value;
+            getData.Year_Joined = dtpJoined.Value;
+            getData.User_Type = groupUser.Controls.OfType<RadioButton>().FirstOrDefault(r => r.Checked).Text;
+            getData.Gender = groupGender.Controls.OfType<RadioButton>().FirstOrDefault(r => r.Checked).Text;
+            getData.Course = cbCourse.Text;
+            getData.Department = cbDept.Text;
+            
+            if (checkEnabled.Checked)
+            {
+                getData.Enabled = "Yes";
+            }
+            else
+            {
+                getData.Enabled = "No";
+            }
+
+
+            try
+            {
+                dbctx.SubmitChanges();
+                MessageBox.Show("The user profile has been updated.");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }

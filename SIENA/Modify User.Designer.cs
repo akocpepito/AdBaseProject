@@ -134,6 +134,7 @@
             this.btnUpdateUser.TabIndex = 72;
             this.btnUpdateUser.Text = "Update User";
             this.btnUpdateUser.UseVisualStyleBackColor = false;
+            this.btnUpdateUser.Click += new System.EventHandler(this.btnUpdateUser_Click);
             // 
             // btnGeneratePwd
             // 
@@ -533,6 +534,7 @@
             this.Controls.Add(this.groupGender);
             this.Name = "Modify_User";
             this.Size = new System.Drawing.Size(347, 621);
+            this.Load += new System.EventHandler(this.Modify_User_Load);
             this.groupUser.ResumeLayout(false);
             this.groupUser.PerformLayout();
             this.groupGender.ResumeLayout(false);
